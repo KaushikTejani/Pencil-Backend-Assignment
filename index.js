@@ -11,8 +11,17 @@ mongoose.connect('mongodb+srv://Kaushik:Kaushik@cluster0.rpenozr.mongodb.net/Pen
 });
 
 
+
 app.get('/', function (req, res) {
-    res.send('Hello World')
+    res.status(200).json({
+        "messgae": "Successfully connnected."
+    })
 })
+
+const searchRoute = require("./router/api/search");
+app.use("/search", searchRoute);
+
+
+
 
 app.listen(PORT, () => console.log(`Server start on port no ${PORT}`));

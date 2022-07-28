@@ -1,6 +1,6 @@
 const csv = require('csvtojson')
-const questionModel = require("./models/questionModel");
-const TopicModel = require("./models/topicModel");
+const questionModel = require("../models/questionModel");
+const TopicModel = require("../models/topicModel");
 const mongoose = require('mongoose')
 
 
